@@ -1,4 +1,4 @@
-[redme.md](https://github.com/user-attachments/files/25938781/redme.md)
+
 # Fake Job Posting Detector AI
 
 <p align="center">
@@ -89,7 +89,7 @@ The model handles **imbalanced datasets** and focuses on detecting fraudulent po
 ---
 
 # Project Structure
-
+```
 fake-job-detector-ai
 │
 ├── app.py
@@ -100,7 +100,7 @@ fake-job-detector-ai
 └── images
     ├── app_interface.jpg
     └── prediction_result.jpg
-
+```
 ---
 
 # Run Locally
