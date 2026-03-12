@@ -4,7 +4,10 @@ import numpy as np
 import re
 from nltk.corpus import stopwords
 
-stopwords = set(stopwords.words('english'))
+# Download stopwords dataset
+nltk.download('stopwords', quiet=True)
+
+stop_words = set(stopwords.words('english'))
 
 #load model
 model = joblib.load('fake_job_model.pkl')
