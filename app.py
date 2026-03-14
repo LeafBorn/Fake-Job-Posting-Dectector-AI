@@ -3,9 +3,11 @@ import joblib
 import numpy as np
 import re
 from nltk.corpus import stopwords
+import warnings
+warnings.filterwarnings("ignore")
 
 # Download stopwords dataset
-nltk.download('stopwords', quiet=True)
+nltk.download('stopwords')
 
 stop_words = set(stopwords.words('english'))
 
