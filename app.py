@@ -8,9 +8,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Download stopwords dataset
-nltk.download('stopwords')
-
-stop_words = set(stopwords.words('english'))
+try:
+    stop_words = set(stopwords.words('english'))
+except:
+    nltk.download('stopwords')
+    stop_words = set(stopwords.words('english'))
 
 #load model
 model = joblib.load('fake_job_model.pkl')
@@ -27,7 +29,7 @@ def clean_text(text):
     text = text.lower()
     text = re.sub(r'[^a-zA-Z]',' ',text)
     words = text.split()
-    words = [w for w in words if w not in stopwords]
+    words = [w for w in words if w not in stop_words]
 
     return ' '.join(words)
 
