@@ -3,6 +3,7 @@ import joblib
 import numpy as np
 import re
 from nltk.corpus import stopwords
+import nltk
 import warnings
 warnings.filterwarnings("ignore")
 
